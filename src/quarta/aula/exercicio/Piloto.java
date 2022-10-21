@@ -3,7 +3,7 @@ package quarta.aula.exercicio;
 public class Piloto {
     private String nome;
     private Integer idade;
-    private Enum sexo;
+    private Sexo sexo;
     private String equipe;
 
     @Override
@@ -15,7 +15,7 @@ public class Piloto {
                 "\n Equipe: " + equipe + "\n";
     }
 
-    public Piloto (String nome, Integer idade, Enum sexo, String equipe) {
+    public Piloto (String nome, Integer idade, Sexo sexo, String equipe) {
         this.nome = nome;
         this.idade = idade;
         this.sexo = sexo;
@@ -42,7 +42,7 @@ public class Piloto {
         return sexo;
     }
 
-    public void setSexo(Enum sexo) {
+    public void setSexo(Sexo sexo) {
         this.sexo = sexo;
     }
 
