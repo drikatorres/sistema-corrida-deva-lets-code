@@ -23,19 +23,20 @@ public class Corrida {
 
     }
 
-  public  static boolean ligar(CarroCorrida carro) {
-      return carro.setLigado(true);
+  public static boolean ligar(CarroCorrida carro) {
+
+        return carro.setLigado(true);
   }
 
   public static float acelerar (float aceleracao, CarroCorrida carro) {
-        if (carro.getVelocidadeAtual() + aceleracao < carro.getVelocidadeMaxima() && carro.isLigado() == true) {
+        if ((carro.getVelocidadeAtual() + aceleracao <= carro.getVelocidadeMaxima()) && carro.isLigado() == true) {
             return carro.setVelocidadeAtual(carro.getVelocidadeAtual() + aceleracao);
 }
         return carro.getVelocidadeAtual();
   }
 
   public static float frear (float frenagem, CarroCorrida carro) {
-        if (carro.getVelocidadeAtual() - frenagem >= 0 && carro.isLigado() == true) {
+        if ((carro.getVelocidadeAtual() - frenagem >= 0) && carro.isLigado() == true) {
             return carro.setVelocidadeAtual(carro.getVelocidadeAtual() - frenagem);
     }
         return carro.getVelocidadeAtual();
