@@ -10,11 +10,11 @@ public class Corrida {
 
         float velocidade1 = acelerar(200, carro1);
         System.out.println(velocidade1);
-        System.out.println(carro1.velocidadeAtual);
+        System.out.println(carro1.getVelocidadeAtual());
         frear(50, carro1);
-        System.out.println(carro1.velocidadeAtual);
+        System.out.println(carro1.getVelocidadeAtual());
         frear(200, carro1);
-        System.out.println(carro1.velocidadeAtual);
+        System.out.println(carro1.getVelocidadeAtual());
         parar(carro1);
         System.out.println(carro1.parar);
         desligar(carro1);
@@ -25,7 +25,7 @@ public class Corrida {
     }
 
   public  static boolean ligar(CarroCorrida carro) {
-      return carro.ligado = true;
+      return carro.setLigado(true);
   }
 
   public static float acelerar (float aceleracao, CarroCorrida carro) {

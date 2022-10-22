@@ -1,8 +1,8 @@
 package quarta.aula.exercicio;
 
 public class CarroCorrida {
-    Integer numeroCarro;
-    Piloto piloto;
+    private Integer numeroCarro;
+    private Piloto piloto;
     float velocidadeMaxima;
     float velocidadeAtual;
     boolean ligado;
@@ -78,8 +78,9 @@ public class CarroCorrida {
         return ligado;
     }
 
-    public void setLigado(boolean ligado) {
+    public boolean setLigado(boolean ligado) {
         this.ligado = ligado;
+        return ligado;
     }
 
 
