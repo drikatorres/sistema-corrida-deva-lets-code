@@ -3,10 +3,10 @@ package quarta.aula.exercicio;
 public class CarroCorrida {
     private Integer numeroCarro;
     private Piloto piloto;
-    float velocidadeMaxima;
-    float velocidadeAtual;
-    boolean ligado;
-    boolean parar;
+    private float velocidadeMaxima;
+    private float velocidadeAtual;
+    private boolean ligado;
+    private boolean parar;
 
     @Override
     public String toString() {
@@ -31,6 +31,7 @@ public class CarroCorrida {
     }
 
     public int getNumeroCarro () {
+
         return numeroCarro;
     }
 
@@ -68,9 +69,10 @@ public class CarroCorrida {
         return velocidadeAtual;
     }
 
-    public void setVelocidadeAtual(float velocidadeAtual) {
+    public float setVelocidadeAtual(float velocidadeAtual) {
 
         this.velocidadeAtual = velocidadeAtual;
+        return velocidadeAtual;
     }
 
     public boolean isLigado() {
@@ -83,7 +85,14 @@ public class CarroCorrida {
         return ligado;
     }
 
+    public boolean isParar() {
+        return parar;
+    }
 
+    public boolean setParar(boolean parar) {
+        this.parar = parar;
+        return parar;
+    }
 }
 
 

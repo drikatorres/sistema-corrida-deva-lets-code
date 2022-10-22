@@ -8,17 +8,16 @@ public class Corrida {
         CarroCorrida carro1 = new CarroCorrida(333, pilotoA, 250, 50, true);
         System.out.println(carro1.toString());
 
-        float velocidade1 = acelerar(200, carro1);
-        System.out.println(velocidade1);
-        System.out.println(carro1.getVelocidadeAtual());
+        acelerar(100, carro1);
+        System.out.println("A velocidade atual do carro é " + carro1.getVelocidadeAtual());
         frear(50, carro1);
-        System.out.println(carro1.getVelocidadeAtual());
-        frear(200, carro1);
-        System.out.println(carro1.getVelocidadeAtual());
+        System.out.println("A velocidade atual do carro é " + carro1.getVelocidadeAtual());
+        frear(100, carro1);
+        System.out.println("A velocidade atual do carro é " + carro1.getVelocidadeAtual());
         parar(carro1);
-        System.out.println(carro1.parar);
+        System.out.println("O carro está parado? " + carro1.isParar());
         desligar(carro1);
-        System.out.println(carro1.ligado);
+        System.out.println("O carro está ligado? " + carro1.isLigado());
 
         System.out.println(carro1.toString());
 
@@ -29,31 +28,31 @@ public class Corrida {
   }
 
   public static float acelerar (float aceleracao, CarroCorrida carro) {
-        if (carro.velocidadeAtual + aceleracao < carro.velocidadeMaxima && carro.ligado == true) {
-            return carro.velocidadeAtual += aceleracao;
+        if (carro.getVelocidadeAtual() + aceleracao < carro.getVelocidadeMaxima() && carro.isLigado() == true) {
+            return carro.setVelocidadeAtual(carro.getVelocidadeAtual() + aceleracao);
 }
-        return carro.velocidadeAtual;
+        return carro.getVelocidadeAtual();
   }
 
   public static float frear (float frenagem, CarroCorrida carro) {
-        if (carro.velocidadeAtual - frenagem >= 0 && carro.ligado == true) {
-            return carro.velocidadeAtual -= frenagem;
+        if (carro.getVelocidadeAtual() - frenagem >= 0 && carro.isLigado() == true) {
+            return carro.setVelocidadeAtual(carro.getVelocidadeAtual() - frenagem);
     }
-        return carro.velocidadeAtual;
+        return carro.getVelocidadeAtual();
   }
 
   public static boolean parar (CarroCorrida carro) {
-        if (carro.velocidadeAtual == 0 && carro.ligado == true) {
-            return carro.parar = true;
+        if (carro.getVelocidadeAtual() == 0 && carro.isLigado() == true) {
+            return carro.setParar(true);
         }
-        return carro.parar = false;
+        return carro.setParar(false);
   }
 
   public static boolean desligar(CarroCorrida carro) {
-        if (carro.parar == true) {
-            return carro.ligado = false;
+        if (carro.isParar() == true) {
+            return carro.setLigado(false);
         }
-        return carro.ligado = true;
+        return carro.setLigado(true);
   }
 }
 
