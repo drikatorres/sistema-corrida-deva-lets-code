@@ -4,7 +4,7 @@ import static quarta.aula.exercicio.Sexo.*;
 
 public class Corrida {
     public static void main(String[] args) {
-        Piloto pilotoA = new Piloto("Harriet", 24, feminino, "Azul");
+        Piloto pilotoA = new Piloto("Harriet", 24, FEMININO, "Azul");
         CarroCorrida carro1 = new CarroCorrida(333, pilotoA, 250, 50, true);
         System.out.println(carro1.toString());
 
