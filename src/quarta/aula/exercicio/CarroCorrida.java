@@ -65,14 +65,15 @@ public class CarroCorrida {
     }
 
     public float getVelocidadeAtual() {
-
         return velocidadeAtual;
     }
 
     public float setVelocidadeAtual(float velocidadeAtual) {
-
-        this.velocidadeAtual = velocidadeAtual;
-        return velocidadeAtual;
+        if (velocidadeAtual <= getVelocidadeMaxima()) {
+            this.velocidadeAtual = velocidadeAtual;
+            return velocidadeAtual;
+        }
+        return velocidadeMaxima;
     }
 
     public boolean isLigado() {
