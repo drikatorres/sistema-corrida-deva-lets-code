@@ -1,0 +1,15 @@
+//mesma ação de formas diferentes
+* @Override
+- Sobrepõe dentro da classe - aplica de várias formas de se fazer uma coisa.
+- Ex.:várias formas de transferências, polimorfismo de sobreposição
+
+* ToString
+
+*Polimorfismo de sobreposição
+*Polimorfismo de um objeto
+
+*sobrecarga: mesma assinatura, parametros(argumentos) diferentes
+- A lista de parâmetros DEVE ser diferente.
+- O tipo de retorno (int, Integer, float, double, Double...) PODE ser diferente.
+- Os modificadores de acesso (private, public, protected) PODEM ser diferentes.
+- As exceções PODEM ser diferentes.
